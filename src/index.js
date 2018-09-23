@@ -18,7 +18,7 @@ class Sorter {
 
   get length() {
     // your implementation
-    return this.array.lenth;
+    return this.array.length;
   }
 
   toArray() {
@@ -28,11 +28,11 @@ class Sorter {
 
   sort(indices) {
     // your implementation
-    let selectedArr = indices.sort().map(index => this.array[index]);
-    selectedArr.sort(this.comparator);
-    
+    let indicesArray = indices.sort().map(index => this.array[index]);
+    indicesArray.sort(this.comparator);
+
     for (let i = 0; i < indices.length; i++) {
-      this.array[indices[i]] = selectedArr[i];
+      this.array[indices[i]] = indicesArray[i];
     }
 
     return this.array;
